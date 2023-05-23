@@ -10,15 +10,12 @@ WORKDIR /app
 
 # Copy the Go module files and download dependencies
 COPY . .
-RUN go mod download
-
-# Copy the Go program source code to the working directory
-COPY . .
+# RUN go mod download
 
 # Build the Go program
-RUN go build -gcflags "-N -l" -o main
-RUN go tool objdump -S main > disassembly.txt
-RUN wc -l disassembly.txt
+# RUN go build -gcflags "-N -l" -o main
+# RUN go tool objdump -S main > disassembly.txt
+# RUN wc -l disassembly.txt
 
 # Set the command to run when the container starts
-CMD ["./main"]
+# CMD ["bash -c run.sh"]

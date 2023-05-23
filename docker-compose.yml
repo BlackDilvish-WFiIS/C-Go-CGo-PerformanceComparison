@@ -1,38 +1,12 @@
 version: "3"
 
 services:
-  4_go:
+  go-app:
     build:
-      context: ./4.AppendingStrings/Go
-      dockerfile: Dockerfile
-    volumes:
-      - app_data:/data
-    command: 
-      - sh
-      - -c
-      - |
-        wc -l disassembly.txt
-        ./main
-  4_c:
-    build:
-      context: ./4.AppendingStrings/C
+      context: .
       dockerfile: Dockerfile
     command: 
       - sh
       - -c
       - |
-        wc -l disassembly.txt
-        ./main
-  4_cgo:
-    build:
-      context: ./4.AppendingStrings/CGo
-      dockerfile: Dockerfile
-    command: 
-      - sh
-      - -c
-      - |
-        wc -l disassembly.txt
-        ./main
-    
-volumes:
-  app_data:
+        ./run.sh
