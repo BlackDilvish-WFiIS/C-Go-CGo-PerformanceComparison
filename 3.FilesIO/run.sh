@@ -2,9 +2,10 @@
 
 echo ""
 echo "=================="
-echo "Exercise 4 AppendingStrings"
+echo "Exercise 3 FilesIO"
 
-cd "4.AppendingStrings"
+cd "3.FilesIO"
+seq 1 10000 > input.txt
 ./C/run.sh
 ./Go/run.sh
 ./CGo/run.sh
