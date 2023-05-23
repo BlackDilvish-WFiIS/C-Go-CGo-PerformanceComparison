@@ -20,7 +20,7 @@ jobs:
 
       - name: Build and run Docker Compose
         run: |
-          docker-compose up --build --detach
+          docker-compose up --build
 
       - name: Stop and remove containers
         run: |
