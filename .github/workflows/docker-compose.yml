@@ -1,0 +1,25 @@
+name: Programs benchmark
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Compose
+        uses: docker/compose-cli@v1
+
+      - name: Build and run Docker Compose
+        run: |
+          docker-compose up --build --detach
+
+      - name: Stop and remove containers
+        run: |
+          docker-compose down
