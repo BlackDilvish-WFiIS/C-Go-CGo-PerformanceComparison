@@ -22,10 +22,6 @@ jobs:
         run: |
           docker-compose up --build --detach
 
-      - name: Run tests
-        run: |
-          ./run.sh
-
       - name: Stop and remove containers
         run: |
           docker-compose down

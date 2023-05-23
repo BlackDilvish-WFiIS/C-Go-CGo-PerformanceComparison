@@ -6,3 +6,5 @@ RUN apt-get update && \
 WORKDIR /app
 
 COPY . .
+
+CMD ["./run.sh"]
