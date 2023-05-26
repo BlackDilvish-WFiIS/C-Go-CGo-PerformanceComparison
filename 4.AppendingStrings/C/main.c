@@ -6,11 +6,11 @@
 int main() {
     clock_t start = clock();
 
-    char buff[50000];
+    char* buff = malloc(sizeof(char) * 200010);
     buff[0] = '\n';
     const char* str = "test";
 
-    for (int i = 0; i < 10000; i++) {
+    for (int i = 0; i < 50000; i++) {
         strcat(buff, str);
     }
 
@@ -19,6 +19,8 @@ int main() {
 
     printf("Result length: %zu\n", strlen(buff));
     printf("Execution time: %f seconds\n", elapsed);
+
+    free(buff);
 
     return 0;
 }

@@ -2,12 +2,10 @@
 
 echo ""
 echo "=================="
-echo "Exercise 3 FilesIO"
+echo "Exercise 7 Strings permutations"
 
-cd "3.FilesIO"
-seq 1 50000 > input.txt
+cd "7.Stringspermutations"
 ./C/run.sh
 ./Go/run.sh
 ./CGo/run.sh
-rm input.txt
 cd ..

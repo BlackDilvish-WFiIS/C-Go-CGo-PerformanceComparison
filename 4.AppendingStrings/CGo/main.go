@@ -15,10 +15,10 @@ import "C"
 func main() {
 	start := time.Now()
 
-	var buff [50000]C.char
+	var buff [200010]C.char
 	str := C.CString("test")
 
-	for i := 0; i < 10000; i++ {
+	for i := 0; i < 50000; i++ {
 		C.strcat(&buff[0], str)
 	}
 

@@ -2,12 +2,10 @@
 
 echo ""
 echo "=================="
-echo "Exercise 3 FilesIO"
+echo "Exercise 6 Matrix multiplication"
 
-cd "3.FilesIO"
-seq 1 50000 > input.txt
+cd "6.Matrixmultiplication"
 ./C/run.sh
 ./Go/run.sh
 ./CGo/run.sh
-rm input.txt
 cd ..
