@@ -36,5 +36,5 @@ func main() {
 
 	elapsed := time.Since(start)
 
-	fmt.Printf("Execution time: %.6f seconds\n", elapsed.Seconds())
+	fmt.Printf("Execution time: %.6f seconds\n\n", elapsed.Seconds())
 }

@@ -32,5 +32,5 @@ func main() {
 		log.Fatalf("Error reading file: %v", err)
 	}
 
-	fmt.Printf("Execution time: %.6f seconds\n", elapsed.Seconds())
+	fmt.Printf("Execution time: %.6f seconds\n\n", elapsed.Seconds())
 }

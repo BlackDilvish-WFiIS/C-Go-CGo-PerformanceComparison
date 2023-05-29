@@ -5,32 +5,29 @@ import (
 	"time"
 )
 
-const (
-	Rows = 1000
-	Cols = 1000
-)
-
 func multiplyMatrices(A, B, result [][]int) {
-	for i := 0; i < Rows; i++ {
-		for j := 0; j < Cols; j++ {
+	size := len(A)
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
 			result[i][j] = 0
-			for k := 0; k < Cols; k++ {
+			for k := 0; k < size; k++ {
 				result[i][j] += A[i][k] * B[k][j]
 			}
 		}
 	}
 }
 
-func main() {
-	matrixA := make([][]int, Rows)
-	matrixB := make([][]int, Rows)
-	resultMatrix := make([][]int, Rows)
+func test(matrixSize int) {
+	fmt.Printf("Matrix size: %d x %d\n", matrixSize, matrixSize)
+	matrixA := make([][]int, matrixSize)
+	matrixB := make([][]int, matrixSize)
+	resultMatrix := make([][]int, matrixSize)
 
-	for i := 0; i < Rows; i++ {
-		matrixA[i] = make([]int, Cols)
-		matrixB[i] = make([]int, Cols)
-		resultMatrix[i] = make([]int, Cols)
-		for j := 0; j < Cols; j++ {
+	for i := 0; i < matrixSize; i++ {
+		matrixA[i] = make([]int, matrixSize)
+		matrixB[i] = make([]int, matrixSize)
+		resultMatrix[i] = make([]int, matrixSize)
+		for j := 0; j < matrixSize; j++ {
 			matrixA[i][j] = i + j
 			matrixB[i][j] = i - j
 		}
@@ -40,5 +37,11 @@ func main() {
 	multiplyMatrices(matrixA, matrixB, resultMatrix)
 
 	elapsed := time.Since(start)
-	fmt.Printf("Execution time: %.6f seconds\n", elapsed.Seconds())
+	fmt.Printf("Execution time: %.6f seconds\n\n", elapsed.Seconds())
+}
+
+func main() {
+	test(100)
+	test(500)
+	test(1000)
 }

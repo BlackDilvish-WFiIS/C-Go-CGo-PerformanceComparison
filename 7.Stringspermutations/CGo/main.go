@@ -47,8 +47,8 @@ func calculatePermutations(str string) int {
 	return int(count)
 }
 
-func main() {
-	str := "abcdefghijkl"
+func test(str string) {
+	fmt.Printf("String to permute: %s, len: %d\n", str, len(str))
 	count := 0
 
 	startTime := time.Now()
@@ -58,5 +58,11 @@ func main() {
 	executionTime := endTime.Sub(startTime)
 
 	fmt.Println("Permutations:", count)
-	fmt.Printf("Execution time: %.6f seconds\n", executionTime.Seconds())
+	fmt.Printf("Execution time: %.6f seconds\n\n", executionTime.Seconds())
+}
+
+func main() {
+	test("abcdefghij")
+	test("abcdefghijk")
+	test("abcdefghijkl")
 }

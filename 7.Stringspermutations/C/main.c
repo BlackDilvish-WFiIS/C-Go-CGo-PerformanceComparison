@@ -21,19 +21,28 @@ void permute(char* str, int l, int r, int* count) {
     }
 }
 
-int main() {
-    char str[] = "abcdefghijkl";
+void test(const char* str)
+{
     int len = strlen(str);
+    char* str_mut = malloc(sizeof(char) * len);
+    strcpy(str_mut, str);
+    printf("String to permute: %s, len: %d\n", str, len);
     int count = 0;
 
     clock_t start_time = clock();
-    permute(str, 0, len - 1, &count);
+    permute(str_mut, 0, len - 1, &count);
     clock_t end_time = clock();
 
     double execution_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
 
     printf("Permutations: %d\n", count);
-    printf("Execution Time: %.5f seconds\n", execution_time);
+    printf("Execution Time: %.5f seconds\n\n", execution_time);
+}
+
+int main() {
+    test("abcdefghij");
+	test("abcdefghijk");
+	test("abcdefghijkl");
 
     return 0;
 }

@@ -25,7 +25,7 @@ int main() {
     fclose(file);
 
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-    printf("Execution time: %.6f seconds.\n", cpu_time_used);
+    printf("Execution time: %.6f seconds.\n\n", cpu_time_used);
 
     return 0;
 }
