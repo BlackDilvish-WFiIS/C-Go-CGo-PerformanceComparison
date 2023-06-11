@@ -2,9 +2,9 @@
 
 echo ""
 echo "=================="
-echo "Exercise 4 AppendingStrings"
+echo "Exercise 1 Hello World"
 
-cd "4.AppendingStrings"
+cd "1.HelloWorld"
 ./C/run.sh
 ./Go/run.sh
 ./CGo/run.sh

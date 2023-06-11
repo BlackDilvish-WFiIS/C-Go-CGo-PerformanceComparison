@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Exercise 3 - C"
+echo "Exercise 1 - C"
 cd "C"
 gcc -g -o main main.c
 objdump -d main > disassembly.txt

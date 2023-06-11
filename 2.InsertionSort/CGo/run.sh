@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "Exercise 6 - CGo"
+echo "Excercise 2 - CGo"
 cd "CGo"
-go build -gcflags "-N -l" -o main
+go build -gcflags "-N -l" -o main main.go
 go tool objdump -S main > disassembly.txt
 wc -l disassembly.txt
-./main
+time ./main
 cd ..
