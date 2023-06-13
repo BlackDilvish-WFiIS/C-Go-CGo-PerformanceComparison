@@ -13,4 +13,11 @@ Projekt został zrealizowany w ramach przedmiotu akademickiego "Język GO"
     - Utworzenie porównania mnożenia macierzy
     - Utworzenie porównania permutacji łańcuchów znakowych
 - Piotr Jasiński:
-    - tba
+    - Utworzenie porównania dla "Hello world"
+    - Utworzenie porównania dla ręcznej implementacji sortowania przez wstawianie
+    - Utworzenie porównania dla rekurencyjnego ciągu Fibonacciego
+    - Utworzenie porównania dla poszukiwania najdłuższego wspólnego ciągu znaków
+    - Utworzenie porównania dla wyszukiwania binarnego
+    - Dodanie uruchomienia implementacji w C w dwóch wersjach:
+        - Brak optymalizacji dla prędkości wykonania (flaga `gcc -O0`)
+        - Maksymalna optymalizacja dla prędkości wykonania (flaga `gcc -O3`)
