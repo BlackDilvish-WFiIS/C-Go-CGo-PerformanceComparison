@@ -21,3 +21,12 @@ Projekt został zrealizowany w ramach przedmiotu akademickiego "Język GO"
     - Dodanie uruchomienia implementacji w C w dwóch wersjach:
         - Brak optymalizacji dla prędkości wykonania (flaga `gcc -O0`)
         - Maksymalna optymalizacja dla prędkości wykonania (flaga `gcc -O3`)
+
+## Uruchomienie projektu
+
+### Wymagania
+- Docker lub środowisko z zainstalowanym Go i GCC (system LINUX lub cygwin) 
+
+### Instrukcja
+- Uruchomić skrypt docker compose za pomocą polecenia: `docker-compose up --build`
+- Alternatywnie, uruchomić główny skrypt z `run.sh` na urządzeniu ze skonfigurowanym środowiskiem
