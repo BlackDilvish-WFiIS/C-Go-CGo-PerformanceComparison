@@ -32,19 +32,18 @@ func main() {
     var ints []int
     loadData(n_lines, &strings, &ints)
 
-    sort.Strings(strings)
-    sort.Ints(ints)
-
     searchString := strings[0]
     searchInt := ints[0]
 
 	start := time.Now()
+    sort.Strings(strings)
     resultString := sort.SearchStrings(strings, searchString)
 	elapsed := time.Since(start)
     fmt.Printf("Target string %s found: %s\n", searchString, strings[resultString]);
     fmt.Printf("String lookup time: %.6f seconds.\n", elapsed.Seconds());
 
 	start = time.Now()
+    sort.Ints(ints)
     resultInt := sort.SearchInts(ints, searchInt)
 	elapsed = time.Since(start)
     fmt.Printf("Target int %d found: %d\n", searchInt, ints[resultInt]);
